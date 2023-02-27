@@ -17,7 +17,7 @@ class _face_recognitionState extends State<face_recognition> {
 
   uploadImage()
   async {
-    final request = http.MultipartRequest("POST", Uri.parse("https://cb57-2402-4000-2280-b66e-29bf-cc6f-6ea6-59cb.ap.ngrok.io/upload"));
+    final request = http.MultipartRequest("POST", Uri.parse("https://9bc6-2402-4000-2280-b66e-fd61-2d8b-58c3-da2d.in.ngrok.io/upload"));
 
     final headers = {"Content-type": "multipart/form-data"};
     request.files.add(http.MultipartFile('image', selectedImage!.readAsBytes().asStream(),selectedImage!.lengthSync(), filename:selectedImage!.path.split("/").last ));

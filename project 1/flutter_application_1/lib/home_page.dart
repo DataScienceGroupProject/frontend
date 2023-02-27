@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/sidebar.dart';
-
+import 'package:flutter_application_1/voice%20recognition.dart';
 import 'face recognition screen.dart';
 
 
@@ -79,7 +79,12 @@ class _home_Screen_1State extends State<home_Screen_1> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder:(_)
+                        {
+                          return const voice_recognition();
+                        }));
+                      },
                       child:const Text("Voice recognition",style:TextStyle(
                         fontFamily:'Inder-Regular',
                         fontSize:20,
