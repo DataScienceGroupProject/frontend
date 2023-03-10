@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/sign%20in%20page.dart';
 import 'package:flutter_application_1/welcome%20page.dart';
@@ -11,6 +12,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // final emailController = TextEditingController();
+  // final passwordController = TextEditingController();
+  //
+  // @override
+  // void dispose()
+  // {
+  //   emailController.dispose();
+  //   passwordController.dispose();
+  //   super.dispose();
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,9 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   color:const Color(0xFF5D6978),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child:const Padding(
+                child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal:10),
                   child: TextField(
+                    // controller:emailController,
                     style:TextStyle(color:Color(0xFFFFFFFF)),
                     decoration: InputDecoration(
                       border:InputBorder.none,
@@ -49,9 +62,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   color:const Color(0xFF5D6978),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child:const Padding(
+                child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal:10),
                   child: TextField(
+                    // controller: passwordController,
                     obscureText:true,
                     style:TextStyle(color:Color(0xFFFFFFFF)),
                     decoration: InputDecoration(
@@ -76,12 +90,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15)
                 ),
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder:(_)
-                  {
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder:(_){
                     return const welcome_screen();
                   }));
+
                 },
+
                 child:const Text("Log in",style:TextStyle(
                   fontFamily:'Inder-Regular',
                   fontSize:20,
@@ -157,4 +172,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+  // Future signIn() async
+  // {
+  //   await FirebaseAuth.instance.signInWithEmailAndPassword(
+  //     email: emailController.text.trim(),
+  //     password: passwordController.text.trim(),);
+  // }
 }
+
+
